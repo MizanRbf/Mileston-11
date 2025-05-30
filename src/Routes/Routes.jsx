@@ -7,7 +7,9 @@ import Login from "../Layouts/AuthLayouts/Login";
 import Register from "../Layouts/AuthLayouts/Register";
 import HomePage from "../Pages/Home/HomePage";
 import ErrorPage from "../Pages/Error/ErrorPage";
-import MyJobs from "../Pages/MyJob/MyJobs";
+import JobDetails from "../Pages/JobDetails/JobDetails";
+import JobApply from "../Pages/JobDetails/JobApply";
+import MyApplications from "../Pages/MyApplications/MyApplications";
 
 export const router = createBrowserRouter([
   {
@@ -27,10 +29,30 @@ export const router = createBrowserRouter([
         Component: Register,
       },
       {
-        path: "/myJobs",
+        path: "/jobs/:id",
+        loader: ({ params }) =>
+          fetch(
+            `https://career-code-server-omega.vercel.app/jobs/${params.id}`
+          ),
         element: (
           <PrivateRoute>
-            <MyJobs></MyJobs>
+            <JobDetails></JobDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/jobApply/:id",
+        element: (
+          <PrivateRoute>
+            <JobApply></JobApply>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myApplications",
+        element: (
+          <PrivateRoute>
+            <MyApplications></MyApplications>
           </PrivateRoute>
         ),
       },

@@ -24,7 +24,7 @@ const Navbar = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/addJobs">Add Jobs</NavLink>
           <NavLink to="/allJobs">All Jobs</NavLink>
-          <NavLink to="/myJobs">My Jobs</NavLink>
+          {user && <NavLink to="/myApplications">My Applications</NavLink>}
         </div>
 
         {/* Authentication */}

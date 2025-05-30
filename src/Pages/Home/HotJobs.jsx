@@ -1,6 +1,5 @@
 import React, { use } from "react";
 import JobCard from "./JobCard";
-import { div } from "motion/react-client";
 
 const HotJobs = ({ jobsPromise }) => {
   const jobs = use(jobsPromise);
