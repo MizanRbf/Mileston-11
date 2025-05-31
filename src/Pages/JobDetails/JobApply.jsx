@@ -76,7 +76,11 @@ const JobApply = () => {
             className="input"
             placeholder="Resume Link"
           />
-          <input type="submit" value="Apply" className="button hover:border" />
+          <input
+            type="submit"
+            value="Apply"
+            className="button hover:shadow-lg"
+          />
         </fieldset>
       </form>
     </div>

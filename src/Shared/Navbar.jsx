@@ -22,9 +22,19 @@ const Navbar = () => {
         {/* NavLinks */}
         <div className="space-x-4 text-white">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/addJobs">Add Jobs</NavLink>
+
           <NavLink to="/allJobs">All Jobs</NavLink>
+
+          {/* For Applicant links. Check roles as well */}
           {user && <NavLink to="/myApplications">My Applications</NavLink>}
+
+          {/* For Recruiter. Check role as well */}
+          {user && (
+            <>
+              <NavLink to="/addJob">Add Job</NavLink>
+              <NavLink to="/myPostedJobs">My Posted Jobs</NavLink>
+            </>
+          )}
         </div>
 
         {/* Authentication */}

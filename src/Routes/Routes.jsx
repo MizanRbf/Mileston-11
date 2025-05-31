@@ -10,6 +10,9 @@ import ErrorPage from "../Pages/Error/ErrorPage";
 import JobDetails from "../Pages/JobDetails/JobDetails";
 import JobApply from "../Pages/JobDetails/JobApply";
 import MyApplications from "../Pages/MyApplications/MyApplications";
+import AddJob from "../Pages/AddJobs/AddJob";
+import MyPostedJobs from "../Pages/MyPostedJobs/MyPostedJobs";
+import ViewApplications from "../Pages/ViewApplications/ViewApplicaitons";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +58,34 @@ export const router = createBrowserRouter([
             <MyApplications></MyApplications>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/addJob",
+        element: (
+          <PrivateRoute>
+            <AddJob></AddJob>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myPostedJobs",
+        element: (
+          <PrivateRoute>
+            <MyPostedJobs></MyPostedJobs>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/applications/:job_id",
+        element: (
+          <PrivateRoute>
+            <ViewApplications></ViewApplications>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://career-code-server-omega.vercel.app/applications/job/${params.job_id}`
+          ),
       },
     ],
   },

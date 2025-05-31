@@ -11,7 +11,7 @@ const JobCard = ({ job }) => {
       <p>{category}</p>
       <p>{description}</p>
       <Link to={`/jobs/${_id}`}>
-        <button className="button mt-4 hover:border">Show Details</button>
+        <button className="button mt-4 hover:shadow-lg">Show Details</button>
       </Link>
     </div>
   );

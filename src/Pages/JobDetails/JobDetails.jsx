@@ -14,7 +14,7 @@ const JobDetails = () => {
         <p>{category}</p>
         <p>{description}</p>
         <Link to={`/jobApply/${_id}`}>
-          <button className="button hover:border">Apply Now</button>
+          <button className="button hover:shadow-lg">Apply Now</button>
         </Link>
       </div>
     </div>

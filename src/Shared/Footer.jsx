@@ -15,7 +15,7 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <nav className="flex flex-col *:hover:underline">
             <Link to="/">Home</Link>
-            <Link to="/addJobs">Add Jobs</Link>
+            <Link to="/addJobs">Add Job</Link>
             <Link to="/allJobs">All Jobs</Link>
             <Link to="/myApplications">My Applications</Link>
           </nav>
