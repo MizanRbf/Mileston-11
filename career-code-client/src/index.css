@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #0077ff;
+  --color-secondary: #00bbff;
+}
+
+.button{
+  @apply bg-primary px-3 py-2 rounded-sm text-white font-bold cursor-pointer hover:bg-white hover:text-primary duration-500;
+}
+
+h1{
+  @apply text-4xl font-bold;
+}
+h2{
+  @apply text-2xl font-bold;
+}
+h3{
+  @apply text-xl font-bold;
+}
+h4{
+  @apply text-lg font-semibold;
+}
+h5{
+  @apply font-semibold;
+}
+
+.active{
+ @apply underline text-primary;
+}
