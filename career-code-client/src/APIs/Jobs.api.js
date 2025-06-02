@@ -1,4 +1,4 @@
 export const jobsCreatedByPromise = email =>{
-  return fetch(`https://career-code-server-omega.vercel.app/jobs/applications?email=${email}`)
+  return fetch(`http://localhost:3000/jobs/applications?email=${email}`,{credentials:'include'})
   .then(res=>res.json());
 };

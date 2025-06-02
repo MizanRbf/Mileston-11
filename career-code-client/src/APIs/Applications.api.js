@@ -1,5 +1,10 @@
-export const myApplicationsPromise = (email) => {
+export const myApplicationsPromise = (email,accessToken) => {
   return fetch(
-    `https://career-code-server-omega.vercel.app/applications?email=${email}`
+    `http://localhost:3000/applications?email=${email}`,{
+      credentials:"include",
+      headers: {
+         authorization: `Bearer ${accessToken}`
+      }
+    }
   ).then((res) => res.json());
 };

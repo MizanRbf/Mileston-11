@@ -29,10 +29,7 @@ const JobApply = () => {
 
     // Post
     axios
-      .post(
-        "https://career-code-server-omega.vercel.app/applications",
-        application
-      )
+      .post("http://localhost:3000/applications", application)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
